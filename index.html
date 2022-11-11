@@ -257,13 +257,48 @@
                 <!-- local settings widget -->
                         <section class="settings">
                                 <h3>Settings</h3>
+
+                                <div class="mail-switch">
+                                    <!-- custom CSS toggle code-->
+                                    <p class="settings-label">Send E-Mail Notifications</p>
+
+                                    <label class="switch-ios switch-light" onclick="">
+                                        <input type="checkbox" id="mailToggle" >
+                                    
+                                        <span>
+                                        <span>Off</span>
+                                        <span>On</span>
+                                        <a></a>
+                                        </span>
+                                    </label>
+                                </div>
+                                
                                 <!-- custom CSS toggle code-->
-                                <!-- custom CSS toggle code-->
-                            
+                                <div class="profile-switch">
+                                    <p class="settings-label">Set Profile to Public</p>
+                    
+                                    <label class="switch-ios switch-light" onclick="">
+                                        <input type="checkbox" id="profileToggle">
+                                        
+                                        <span>
+                                          <span>Off</span>
+                                          <span>On</span>
+                                          <a></a>
+                                        </span>
+                                      </label>
+                                </div>
+
                             <select class="form-field" id="timezone">
                                 <option disabled selected>Select a Timezone</option>
-                                <option>Eastern</option>
-                            <!-- more options -->
+                                <option>Atlantic Standard Time (AST)</option>
+                                <option>Eastern Standard Time (EST)</option>
+                                <option>Central Standard Time (CST)</option>
+                                <option>Mountain Standard Time (MST)</option>
+                                <option>Pacific Standard Time (PST)</option>
+                                <option>Alaskan Standard Time (AKST)</option>
+                                <option>Hawaii-Aleutian Standard Time (HST)</option>
+                                <option>Samoa standard time (UTC-11)</option>
+                                <option>Chamorro Standard Time (UTC+10)</option>    
                             </select>
                             <div class="settings-button" >
                                 <button class="button-primary" id="save">Save</button>
