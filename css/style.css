@@ -14,22 +14,69 @@
     "header"
     "navigation"
     "main";
+    position: relative;
 }
 
 .header {
     grid-area: header;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(105, 110, 180);
+    height: 70px;
 }
 
-.navigation {
-    grid-area: navigation;
+.logo-container {
+    display: flex;
+    justify-content: space-between; 
+    max-width: auto;
 }
 
-.main {
-    grid-area: main;
+.logo-container h1 {
+    font-weight: normal;
+    font-size: 20px;
+    width: 100px;
+    margin-bottom: 18px;
+    margin-top: 20px;
+    margin-left: 15px;
+    color: white;
 }
-.main {
-    display: grid;
-    }
+
+.profile-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 155px;
+    width: -moz-min-content;
+    width: min-content;
+    margin-left: auto;
+    margin-right: 12px;
+}
+.profile-container img {
+    border-radius: 50%;
+    height: 40px; 
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.profile-container p {
+    font-size: 14px;
+    margin-top: 27px;
+    color: white;
+    margin-right: 5px;
+    min-width: 80px;
+}
+
+.bell-icon{
+    max-width: 20px;
+    fill: white;
+    margin-right: 5px;
+}
+
+.bell-icon:hover {
+    animation-duration: 2s;
+    animation-name: jingle-grow;
+    transition-timing-function: ease-out;
+}
     
 @media (min-width: 768px) {
     .grid-container {
