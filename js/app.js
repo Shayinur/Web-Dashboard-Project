@@ -1,6 +1,14 @@
 const alertBanner1 = document.getElementById("alert1");
 const alertBanner2 = document.getElementById("alert2");
 const alertWrapper = document.getElementById("alertWrapper");
+const user = document.getElementById("userField");
+const message = document.getElementById("messageField");
+const hourly = document.getElementById("hourly");
+const daily = document.getElementById("daily");
+const weekly = document.getElementById("weekly");
+const monthly = document.getElementById("monthly");
+const trafficNav = document.querySelector('.traffic-nav');
+const send = document.getElementById("send");
 //let dot = document.getElementById("dot");
 
 // create the html for the banner
@@ -118,3 +126,24 @@ const mobileOptions = {
             }
         }
     };
+
+ let mobileChart = new Chart(mobileCanvas, {
+        type: 'doughnut',
+        data: mobileData,
+        options: mobileOptions
+ });
+
+
+ send.addEventListener('click', () => {
+    
+    // ensure user and message fields are filled out
+    if (user.value === "" && message.value === "") {
+        alert("Please fill out user and message fields before sending");
+    } else if (user.value === "" ) {
+        alert("Please fill out user field before sending");
+    } else if (message.value === "" ) {
+        alert("Please fill out message field before sending");
+    } else {
+        alert(`Message successfully sent to: ${user.value}`);
+    }
+ });
