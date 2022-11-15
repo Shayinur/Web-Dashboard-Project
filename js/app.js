@@ -39,6 +39,8 @@ let trafficData = {
         ],
 };
 
+
+
 let trafficOptions = {
     backgroundColor: 'rgba(112, 104, 201, .5)',
     fill: true,
@@ -62,6 +64,12 @@ let trafficChart = new Chart(trafficCanvas, {
     data: trafficData,
     options: trafficOptions
 });
+
+function newChart(chart, labels, data) {
+	chart.data.labels = labels;
+	chart.data.datasets[0].data = data;
+	chart.update();
+}
 
 // bar graph
 const dailyCanvas = document.getElementById("daily-chart");

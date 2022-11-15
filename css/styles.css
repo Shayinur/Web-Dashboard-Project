@@ -27,12 +27,12 @@
     height: 70px;
 }
 
-.logo-container {
+ .profile-container {
     display: flex;
     justify-content: space-between; 
     max-width: auto;
 }
-.logo-container h1 {
+.profile-container h1 {
     font-weight: normal;
     font-size: 20px;
     width: 100px;
