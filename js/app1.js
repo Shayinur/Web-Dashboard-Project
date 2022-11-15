@@ -48,3 +48,35 @@ let trafficOptions = {
   });
 
   const dailyCanvas = document.getElementById("daily-chart");
+
+  //daily traffic bar chart data
+
+const dailyData = {
+    labels:["S", "M", "T", "W", "T", "F", "S"],
+    datasets: [{
+        label:'# of Hits',
+        data: [75,114,185,125,225,200,100],
+        backgroundColor: '#7477BF',
+        borderWidth: 1
+
+    }]
+};
+
+const dailyOptions = {
+    scales: {
+        y: {
+            beginAtZero: true
+        }
+    },
+    plugins: {
+        legends: {
+            display: false
+        }
+    }
+};
+
+const dailyChart = new Chart (dailyCanvas, {
+    type: 'bar',
+    data: dailyData,
+    options: dailyOptions
+});
