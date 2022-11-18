@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+  
 }
 
 .grid-container {
@@ -80,7 +81,7 @@ header h3 {
     padding: 10px 50px 10px 50px;
 }
 
-nav svg {
+nav img {
     height: 40px;
     width: 40px;
     display: flex;
